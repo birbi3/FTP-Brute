@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 
+#open source
 import pysftp
 
 def main():
 	usr_list = raw_input("Enter the location of your username last: ")
 	pas_list = raw_input("Enter the location of your password list: ")
 	hostname = raw_input("Enter the hostname and include obscure port number: ")
-	usr_list = 'test1.txt'
-	pas_list = 'test2.txt'
 	with open(usr_list, 'r') as usr:
 		u_list = [_u.rstrip() for _u in usr]
 	with open(pas_list, 'r') as password:
@@ -23,4 +22,5 @@ def main():
 				continue
 	
 
-main()
+if __name__ == '__main__':
+    main()
